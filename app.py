@@ -6,7 +6,7 @@ from datetime import datetime
 
 # ---------------- Page config ----------------
 st.set_page_config(
-    page_title="Naseem's Med App — Epic Advanced",
+    page_title="Naseem's Med App ",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -147,12 +147,12 @@ def badge_html(text, cls):
 
 # ---------------- Sidebar: user info & quick actions ----------------
 with st.sidebar:
-    st.markdown("<div style='text-align:center'><h3 class='brand'>🩺 Naseem Med — EPIC</h3><div class='tag'>Futuristic clinical assistant</div></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align:center'><h3 class='brand'>🩺 Razeena Med </h3><div class='tag'>Futuristic clinical assistant</div></div>", unsafe_allow_html=True)
     st.markdown("---")
 
-    name = st.text_input("Patient name", value="Anonymous")
+    name = st.text_input("Patient name", value="-")
     age = st.number_input("Age (years)", min_value=0, max_value=120, value=25)
-    sex = st.selectbox("Sex", ['Male','Female','Other'])
+    sex = st.selectbox("Gender", ['Male','Female','Other'])
     contact = st.text_input("Contact / ID (optional)")
 
     st.markdown("---")
@@ -168,7 +168,7 @@ with st.sidebar:
 
 # ---------------- Main UI ----------------
 
-st.markdown("<div class='hero'> <div style='display:flex;align-items:center;justify-content:space-between'> <div><div class='brand'>Naseem's Medical — Epic Advanced</div><div class='tag'>Interactive clinical summary • Visual & professional</div></div><div style='text-align:right'><div class='muted'>Logged: " + datetime.now().strftime('%Y-%m-%d %H:%M') + "</div></div></div></div>", unsafe_allow_html=True)
+st.markdown("<div class='hero'> <div style='display:flex;align-items:center;justify-content:space-between'> <div><div class='brand'>Naseem's Medical App </div><div class='tag'>Interactive clinical summary • Visual & professional</div></div><div style='text-align:right'><div class='muted'>Logged: " + datetime.now().strftime('%Y-%m-%d %H:%M') + "</div></div></div></div>", unsafe_allow_html=True)
 
 # Input area
 st.markdown("## 🔎 Enter clinical values")
@@ -186,7 +186,7 @@ with col3:
 st.markdown("---")
 
 # Generate button with animation-like UX
-if st.button("📊 Generate Epic Report", key='gen'):
+if st.button("📊 Generate Report", key='gen'):
     bmi_val, bmi_cat = calculate_bmi(weight, height)
     bp_score, bp_cat = get_bp_category(systolic, diastolic)
     sugar_score, sugar_cat = get_sugar_category(fasting)

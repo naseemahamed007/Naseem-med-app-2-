@@ -1,4 +1,2 @@
-streamlit
-pandas
-numpy
-matplotlib
+pip install streamlit plotly pandas matplotlib
+

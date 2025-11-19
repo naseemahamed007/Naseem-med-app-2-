@@ -1,4 +1,3 @@
-
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -7,7 +6,7 @@ from datetime import datetime
 
 # ---------------- Page config ----------------
 st.set_page_config(
-    page_title="Naseem's Med App ",
+    page_title="Naseem's Med App — Epic Advanced",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -187,7 +186,7 @@ with col3:
 st.markdown("---")
 
 # Generate button with animation-like UX
-if st.button("📊 Generate Detailed Report", key='gen'):
+if st.button("📊 Generate Epic Report", key='gen'):
     bmi_val, bmi_cat = calculate_bmi(weight, height)
     bp_score, bp_cat = get_bp_category(systolic, diastolic)
     sugar_score, sugar_cat = get_sugar_category(fasting)
@@ -288,3 +287,4 @@ else:
     st.info('Enter values and press "Generate Epic Report" to see a professional summary with visuals.')
 
 # ---------------- END ----------------
+

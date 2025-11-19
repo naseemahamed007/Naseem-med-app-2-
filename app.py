@@ -7,7 +7,7 @@ from datetime import datetime
 
 # ---------------- Page config ----------------
 st.set_page_config(
-    page_title="Naseem's Med App — Epic Advanced",
+    page_title="Naseem's Med App ",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"

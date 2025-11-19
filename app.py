@@ -187,7 +187,7 @@ with col3:
 st.markdown("---")
 
 # Generate button with animation-like UX
-if st.button("📊 Generate Epic Report", key='gen'):
+if st.button("📊 Generate Report", key='gen'):
     bmi_val, bmi_cat = calculate_bmi(weight, height)
     bp_score, bp_cat = get_bp_category(systolic, diastolic)
     sugar_score, sugar_cat = get_sugar_category(fasting)

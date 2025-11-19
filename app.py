@@ -249,7 +249,7 @@ if st.button("📊 Generate Report", key='gen'):
         bmi_trend = np.clip(bmi_val + 0.2*np.sin(days/3) + np.linspace(-0.5,0,days.size), 12, 45)
         fig, ax = plt.subplots(figsize=(4,2.2))
         ax.plot(days, bmi_trend)
-        ax.set_title('BMI (last 14 days)')
+        ax.set_title('BMI')
         ax.set_xlabel('days')
         ax.grid(True, alpha=0.2)
         st.pyplot(fig)
